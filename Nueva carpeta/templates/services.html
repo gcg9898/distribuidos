@@ -1,0 +1,28 @@
+<html>
+<body>
+<form action="/services" method="post">
+Ejecutar pruebaclase
+<input type="textbox" name="num1"> </input>
+<input type="textbox" name="num2"> </input>
+<br>
+{%for x in ips%}
+    {%set a = x + "pruebaclase"%}
+    {%set b = x + "pruebaclase"+'1'%}
+    <input type="checkbox" name="{{a}}"> {{a}}</input>
+    <br>
+    <input type="textbox" name="{{b}}"> {{b}}</input>
+    <br>
+{%endfor%}
+Ejecutar remotefile
+{%for x in ips%}
+    {%set a = x + "remotefile"%}
+    {%set b = x + "remotefile"+'2'%}
+    <input type="checkbox" name="{{a}}"> {{a}}</input>
+    <br>
+    <input type="textbox" name="{{b}}"> {{b}}</input>
+    <br>
+{%endfor%}
+<button type="submit">lanzar</button>
+</form>
+</body>
+</html>

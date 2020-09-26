@@ -1,0 +1,38 @@
+<html>
+<body>
+<form action="/leer" method="post">
+ip1 <br>
+{%for x in dicciona["dir1"]%}
+    {%set a = "listip1"%}
+    <label>{{x}}</label>
+    <input type="checkbox" value = {{x}} name="{{a}}"> {{a}}</input>
+    <br>
+{%endfor%}
+ip2 <br>
+{%for x in dicciona["dir2"]%}
+    <label>{{x}}</label>
+    {%set a = "listip2"%}
+    <input type="checkbox" value = {{x}} name="{{a}}"> {{a}}</input>
+    <br>
+{%endfor%}
+
+<button type="submit" formaction="/leer">ver</button>
+<button type="submit" formaction="/descargar">descargar</button>
+<br>
+</form>
+
+<form action="/crear" method="post">
+        <label>Nombre fichero</label>
+        <input type="textbox" name="titulo">ip1 </input>
+        <label>Contenido fichero</label>
+        <input type="textbox" name="contenido">ip1 </input>
+        <br>
+        <label>Ip1</label>
+        <input type="checkbox" value = 1 name="ip1">ip1 </input>
+        <label>Ip2</label>
+        <input type="checkbox" value = 2 name="ip2"> ip2</input>
+        <br>
+    <button type="submit">crear</button>
+</form>
+</body>
+</html>
